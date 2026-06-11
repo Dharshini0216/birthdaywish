@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Balloons -->
+        <div class="balloons">
+            <div class="balloon balloon-1"></div>
+            <div class="balloon balloon-2"></div>
+            <div class="balloon balloon-3"></div>
+            <div class="balloon balloon-4"></div>
+            <div class="balloon balloon-5"></div>
+        </div>
+
+        <!-- Confetti -->
+        <div class="confetti-container" id="confettiContainer"></div>
+
+        <!-- Main Content -->
+        <div class="card">
+            <div class="header">
+                <h1 class="title">🎉 Happy Birthday Kamal! 🎉</h1>
+                <p class="subtitle">Make a wish and blow the candles!</p>
+            </div>
+
+            <!-- Cake Section -->
+            <div class="cake-section">
+                <div class="cake">
+                    <div class="candle" id="candle1">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" id="candle2">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" id="candle3">
+                        <div class="flame"></div>
+                    </div>
+                    <div class="cake-layer layer-top"></div>
+                    <div class="cake-layer layer-middle"></div>
+                    <div class="cake-layer layer-bottom"></div>
+                </div>
+                <p class="cake-instruction">Click "Blow Candles" to extinguish the flames!</p>
+            </div>
+
+            <!-- Wishes Section -->
+            <div class="wishes-section">
+                <h2>Birthday Wishes</h2>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="wishInput" 
+                        placeholder="Write your birthday wish here..."
+                        maxlength="100"
+                    >
+                    <button id="addWishBtn" class="btn btn-primary">Add Wish</button>
+                </div>
+                <div id="wishList" class="wish-list"></div>
+                <p class="wish-counter"><span id="wishCount">0</span>/10 wishes</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="blowCandlesBtn" class="btn btn-danger">Blow Candles 💨</button>
+                <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                <button id="sendWishesBtn" class="btn btn-success">Send Wishes 🎁</button>
+            </div>
+
+            <!-- Message Section -->
+            <div id="message" class="message"></div>
+
+            <!-- Birthday Info Section -->
+            <div class="birthday-info">
+                <h3>Birthday Person Info</h3>
+                <div class="info-group">
+                    <input 
+                        type="text" 
+                        id="nameInput" 
+                        placeholder="Enter birthday person's name..."
+                        maxlength="50"
+                    >
+                    <input 
+                        type="date" 
+                        id="dateInput"
+                    >
+                </div>
+                <div id="ageDisplay" class="age-display"></div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-label">Total Wishes</span>
+                    <span class="stat-value" id="totalWishes">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Candles Blown</span>
+                    <span class="stat-value" id="blownCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
